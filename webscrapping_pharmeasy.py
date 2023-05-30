@@ -1,10 +1,14 @@
-lst=[]
+#usr/bin/python3
+"""
+This code snippet is used to scrap data from pharmeasy webpages using beautifulsoup
+"""
 import requests
 import warnings
 warnings.filterwarnings("ignore")
 from bs4 import BeautifulSoup
 import pandas as pd
 from time import sleep
+lst=[]
 for i in range(1,150000):
     URL = "https://pharmeasy.in/online-medicine-order/"+str(i)
     page = requests.get(URL)
